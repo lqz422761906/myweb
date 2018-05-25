@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            margin: 50px;
+        }
+
+        #fj{
+            list-style: none;
+            margin-left:284px;
+            margin-top: 50px;
+        }
+
+        #fj li{
+            float: left;
+            margin-left: 10px;
+        }
+
+        #big_img{
+            margin-left: 10px;
+        }
+
+        #des{
+            margin: 10px;
+            color: skyblue;
+            font-family:bold;
+            font-size: 30px;
+        }
+        .header{
+            height: 500px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <!--大图描述-->
+    <p id="des">蒲公英</p>
+    <!--大图展示-->
+    <img id="big_img" src="素材图片/宠物相册/1.jpg" alt="" width="540">
+    <!--小图列表-->
+    <ul id="fj">
+        <li>
+            <a href="素材图片/宠物相册/1.jpg" title="蒲公英">
+                <img src="素材图片/宠物相册/1.jpg" width="100" alt="蒲公英">
+            </a>
+        </li>
+        <li>
+            <a href="素材图片/宠物相册/2.jpg" title="热气球">
+                <img src="素材图片/宠物相册/2.jpg" width="100" alt="热气球">
+            </a>
+        </li>
+        <li>
+            <a href="素材图片/宠物相册/3.jpg" title="别致小屋">
+                <img src="素材图片/宠物相册/3.jpg" width="100" alt="别致小屋">
+            </a>
+        </li>
+        <li>
+            <a href="素材图片/宠物相册/4.jpg" title="高山湖水">
+                <img src="素材图片/宠物相册/4.jpg" width="100" alt="高山湖水">
+            </a>
+        </li>
+        <li>
+            <a href="素材图片/宠物相册/5.jpg" title="高速公路">
+                <img src="素材图片/宠物相册/5.jpg" width="100" alt="高速公路">
+            </a>
+        </li>
+    </ul>
+</div>
+<script>
+    window.onload = function(){
+        var alist = document.getElementsByTagName("ul")[0].getElementsByTagName("a");
+        var des = document.getElementById("des");
+        var big_img = document.getElementById("big_img");
+        for(var i=0;i<alist.length;i++){
+            alist[i].onclick = function(){
+                des.innerHTML =this.title;
+                big_img.src = this.href;
+                return false;
+            }
+        }
+    };
+</script>
+</body>
+</html>

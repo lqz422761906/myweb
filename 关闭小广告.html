@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关闭小广告</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .box{
+            width: 258px;
+            height: 258px;
+            position: absolute;
+        }
+        #close{
+            position: absolute;
+            top: 18px;
+            right: 18px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <img id="img1" src="素材图片/关闭小广告/img1.jpg" alt="" width="258">
+    <img id="close" src="素材图片/关闭小广告/close.jpg" alt="" width="40">
+</div>
+<script>
+    window.onload = function(){
+        var close = document.getElementById("close");
+        var img1 =document.getElementById("img1");
+        var box = document.getElementsByClassName("box")[0];
+        close.onclick = function(){
+            box.style.display="none";
+        }
+    };
+</script>
+</body>
+</html>

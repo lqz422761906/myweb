@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片切换</title>
+</head>
+<body>
+<img id="icon" src="素材图片/图片切换/icon_01.png" alt="">
+<p></p>
+<button id="prev">上一张</button>
+<button id="next">下一张</button>
+<script>
+    window.onload = function(){
+        var icon = document.getElementById("icon");
+        var next = document.getElementById("next");
+        var prev = document.getElementById("prev");
+
+        var minindex = 1, maxindex = 9, dangqianindex = minindex;
+        next.onclick = function(){
+            if(dangqianindex === maxindex){
+                dangqianindex = minindex;
+            }else{
+                dangqianindex ++;
+            };
+            icon.setAttribute("src", "图片/icon_0" + dangqianindex + ".png");
+            console.log(icon.src);
+        };
+
+        prev.onclick = function(){
+            if(dangqianindex===minindex){
+                dangqianindex = maxindex;
+            }else{
+                dangqianindex --;
+            };
+            icon.setAttribute("src","图片/icon_0"+dangqianindex + ".png");
+            console.log(icon.src);
+        };
+
+    };
+</script>
+<script>
+    window.onload = function(){
+        var imgL=document.getElementById("icon");
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        for(var i=0;i<){
+
+        }
+    };
+</script>
+</body>
+</html>
